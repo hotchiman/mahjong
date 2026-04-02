@@ -1,0 +1,27 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}麻雀{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>麻雀</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <!-- 各ページごとに変わる部分 -->
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; ほほほっち</p>
+    </footer>
+</body>
+</html>

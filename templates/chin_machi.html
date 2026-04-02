@@ -1,0 +1,28 @@
+<!-- templates/chin_machi.html -->
+{% extends "base.html" %}
+
+{% block title %}麻雀{% endblock %}
+
+{% block content %}
+    <h2>少牌マイティ 清一色待ち判定</h2>
+    <p style>牌姿を数値で入力（例：224578）</p>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <div>
+            <label>牌姿:</label>
+            <input type="text" name="haishi" value="{{ haishi or '' }}">
+        </div>
+        <button type="submit">送信</button>
+    </form>
+
+    <br>
+    {% if agari_str %}
+        和了牌:
+        <span style="color:blue;">{{ agari_str }}</span>
+    {% endif %}
+
+{% endblock %}

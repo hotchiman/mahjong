@@ -1,0 +1,16 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+
+{% block title %}トップページ{% endblock %}
+
+{% block content %}
+    <h2>トップページ</h2>
+    <p>Tools</p>
+    <ul>
+        <li>
+            <nav>
+                <a href="{{ url_for('chin_machi') }}">少牌マイティ 清一色待ち判定</a>
+            </nav>
+        </li>
+    </ul>
+{% endblock %}
