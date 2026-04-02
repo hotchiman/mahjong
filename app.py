@@ -38,3 +38,8 @@ def chin_machi():
 
     # GETメソッド時はフォームを表示
     return render_template("chin_machi.html")
+
+# Pythonスクリプトとして直接実行されたときだけ起動する
+if __name__ == "__main__":
+    # debug=True でデバッグモードを有効化
+    app.run(debug=True, port=5000)
